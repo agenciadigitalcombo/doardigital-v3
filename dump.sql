@@ -69,7 +69,6 @@ CREATE TABLE customers (
     register_date TIMESTAMP,
     customer_hash VARCHAR(255),
     password_hash VARCHAR(255),
-    admin_ID INT,
     is_activated BOOLEAN DEFAULT FALSE,
     activation_code VARCHAR(255)
 );
@@ -103,9 +102,23 @@ CREATE TABLE subscriptions (
 CREATE TABLE historys_invoices (
     id INT AUTO_INCREMENT PRIMARY KEY,
     tenant_ID INT,
+    transaction_hash VARCHAR(255),
+    external_hash VARCHAR(255),
     status VARCHAR(50),
     last_modified_date TIMESTAMP,
     body TEXT
+);
+CREATE TABLE invoices (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    tenant_ID INT,
+    customer_ID INT,
+    amount DECIMAL(10, 2),
+    transaction_hash VARCHAR(255),
+    external_hash VARCHAR(255),
+    due_date VARCHAR(20),
+    register_date TIMESTAMP,
+    type VARCHAR(50),
+    status VARCHAR(50)
 );
 CREATE TABLE messages (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -130,18 +143,6 @@ CREATE TABLE messages_tempalte (
     body TEXT,
     type VARCHAR(255),
     call_back VARCHAR(255)
-);
-CREATE TABLE invoices (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    tenant_ID INT,
-    customer_ID INT,
-    amount DECIMAL(10, 2),
-    transaction_hash VARCHAR(255),
-    external_hash VARCHAR(255),
-    due_date VARCHAR(20),
-    register_date TIMESTAMP,
-    type VARCHAR(50),
-    status VARCHAR(50)
 );
 CREATE TABLE reports (
     id INT AUTO_INCREMENT PRIMARY KEY,
