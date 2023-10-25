@@ -183,3 +183,18 @@ CREATE TABLE invoices_annotations (
     texto TEXT,
     data TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+CREATE TABLE tickets (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    tenant_ID INT,
+    subject VARCHAR(255) NOT NULL,
+    description TEXT NOT NULL,
+    status VARCHAR(50),
+    open_date TIMESTAMP,
+    close_date TIMESTAMP
+);
+CREATE TABLE notification (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    tenant_ID INT,
+    content VARCHAR(255),
+    read BOOLEAN 0
+);
