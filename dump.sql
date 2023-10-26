@@ -111,6 +111,7 @@ CREATE TABLE historys_invoices (
 CREATE TABLE invoices (
     id INT AUTO_INCREMENT PRIMARY KEY,
     tenant_ID INT,
+    invoices_ID INT,
     customer_ID INT,
     amount DECIMAL(10, 2),
     transaction_hash VARCHAR(255),
