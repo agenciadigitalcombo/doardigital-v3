@@ -9,6 +9,7 @@ CREATE TABLE admins (
     fk VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL,
     password_hash VARCHAR(255) NOT NULL,
+    document INT,
     admin_ID INT,
     is_activated BOOLEAN DEFAULT FALSE,
     activation_code VARCHAR(255),
@@ -58,6 +59,12 @@ CREATE TABLE accounts (
     token_hash VARCHAR(255),
     key_hash VARCHAR(255)
 );
+CREATE TABLE key_pix (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    tenant_ID INT,
+    token_hash TEXT,
+    qrcode TEXT
+);
 CREATE TABLE customers (
     id INT AUTO_INCREMENT PRIMARY KEY,
     tenant_ID INT,
@@ -66,6 +73,7 @@ CREATE TABLE customers (
     email VARCHAR(255),
     gender VARCHAR(255),
     phone VARCHAR(20),
+    birthday VARCHAR(10),
     register_date TIMESTAMP,
     customer_hash VARCHAR(255),
     password_hash VARCHAR(255),
@@ -149,6 +157,7 @@ CREATE TABLE reports (
     id INT AUTO_INCREMENT PRIMARY KEY,
     tenant_ID INT,
     type VARCHAR(50),
+    total VARCHAR(255),
     date VARCHAR(10)
 );
 CREATE TABLE whatsapp (
@@ -199,4 +208,17 @@ CREATE TABLE notification (
     tenant_ID INT,
     content VARCHAR(255),
     read BOOLEAN 0
+);
+CREATE TABLE form_tokens (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    token VARCHAR(255)
+);
+CREATE TABLE leads (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    tenant_ID INT,
+    name VARCHAR(255),
+    email VARCHAR(255) UNIQUE,
+    phone INT,
+    data TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    status INT
 );
