@@ -38,6 +38,7 @@ CREATE TABLE visual_styles (
     primary_color VARCHAR(255),
     secondary_color VARCHAR(255),
     logo VARCHAR(255),
+    template_name VARCHAR(255),
     ico VARCHAR(255)
 );
 CREATE TABLE tenant_custom_fields (
@@ -123,6 +124,7 @@ CREATE TABLE invoices (
     customer_ID INT,
     amount DECIMAL(10, 2),
     transaction_hash VARCHAR(255),
+    ip VARCHAR(255),
     external_hash VARCHAR(255),
     due_date VARCHAR(20),
     register_date TIMESTAMP,
