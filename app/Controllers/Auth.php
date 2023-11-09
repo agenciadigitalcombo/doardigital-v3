@@ -18,17 +18,22 @@ class Auth extends BaseController
         if ($username == 'admin@themesbrand.com' && $password == '123456') {
             $session = session();
             $session->set('isLoggedIn', 1);
-            return redirect()->to('/');
+            return redirect()->to('/painel');
         } else {
             return redirect()->back()->with('error', 'These credentials do not match our records.');
         }
+    }
+
+    public function teste()
+    {
+        return view('painel/teste');
     }
 
     public function logout()
     {
         $session = session();
         $session->remove('isLoggedIn');
-        return redirect()->to('/login');
+        return redirect()->to('/painel');
     }
 
 }

@@ -9,6 +9,29 @@ class Home extends BaseController
         return view('index');
     }
 
+    public function landing()
+    {
+        return view('landing');
+    }
+
+    public function cadastro()
+    {
+        return view('cadastro');
+    }
+
+    public function checkout()
+    {
+        return view('checkout');
+    }
+
+    public function obrigado()
+    {
+        return view('obrigado');
+    }
+
+
+
+
     public function root($path = '')
     {
         if ($path !== '') {

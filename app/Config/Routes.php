@@ -31,10 +31,16 @@ $routes->setAutoRoute(false);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/login', 'Auth::index', ['filter' => 'noauth']);
+$routes->get('/painel/teste', 'Auth::teste');
 $routes->post('/login', 'Auth::login');
+$routes->get('/', 'Home::landing');
+$routes->get('/logout', 'Auth::logout');
+$routes->get('/doacao', 'Home::checkout');
+$routes->get('/cadastro', 'Home::cadastro');
+$routes->get('/obrigado', 'Home::obrigado');
 
 // Filter on route group for logged in user
-$routes->group('', ['filter'=>'auth'], function ($routes){
+$routes->group('/painel', ['filter'=>'auth'], function ($routes){
     $routes->get('/logout', 'Auth::logout');
     $routes->get('/', 'Home::index');
     $routes->get('/(:any)', 'Home::root/$1');
