@@ -14,7 +14,7 @@ CREATE TABLE admins (
     is_activated BOOLEAN DEFAULT FALSE,
     activation_code VARCHAR(255),
     recovery_code VARCHAR(255),
-    data_register VARCHAR(255)
+    data_register TIMESTAMP
 );
 CREATE TABLE permissions (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -29,6 +29,7 @@ CREATE TABLE tenant_admins (
 CREATE TABLE tenants (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255),
+    type VARCHAR(255),
     admin_ID INT,
     template_ID INT
 );
