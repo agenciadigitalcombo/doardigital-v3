@@ -1,5 +1,8 @@
 <?php
+namespace app\Library;
+
 defined('BASEPATH') or exit('No direct script access allowed');
+
 
 class Asaas
 {
