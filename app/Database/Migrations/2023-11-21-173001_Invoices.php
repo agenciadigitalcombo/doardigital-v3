@@ -13,6 +13,6 @@ class Invoices extends Migration
 
     public function down()
     {
-        //
+        $this->forge->dropTable('invoices');
     }
 }

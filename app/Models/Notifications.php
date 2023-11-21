@@ -4,7 +4,7 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class Notification extends Model
+class Notifications extends Model
 {
     protected $DBGroup          = 'default';
     protected $table            = 'notifications';

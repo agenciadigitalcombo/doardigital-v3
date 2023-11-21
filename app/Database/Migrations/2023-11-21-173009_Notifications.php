@@ -4,7 +4,7 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class Notification extends Migration
+class Notifications extends Migration
 {
     public function up()
     {
@@ -13,6 +13,6 @@ class Notification extends Migration
 
     public function down()
     {
-        //
+        $this->forge->dropTable('notifications');
     }
 }

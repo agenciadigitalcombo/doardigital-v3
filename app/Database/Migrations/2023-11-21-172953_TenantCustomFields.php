@@ -13,6 +13,6 @@ class TenantCustomFields extends Migration
 
     public function down()
     {
-        //
+        $this->forge->dropTable('tenant_custom_fields');
     }
 }

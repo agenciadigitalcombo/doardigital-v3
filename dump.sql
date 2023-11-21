@@ -206,7 +206,7 @@ CREATE TABLE tickets (
     open_date TIMESTAMP,
     close_date TIMESTAMP
 );
-CREATE TABLE notification (
+CREATE TABLE notifications (
     id INT AUTO_INCREMENT PRIMARY KEY,
     tenant_ID INT,
     content VARCHAR(255),

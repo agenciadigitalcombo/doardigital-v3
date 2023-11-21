@@ -13,6 +13,6 @@ class Admins extends Migration
 
     public function down()
     {
-        //
+        $this->forge->dropTable('admins');
     }
 }

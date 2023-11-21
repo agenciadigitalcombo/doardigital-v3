@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 
-class Notification extends BaseController
+class Notifications extends BaseController
 {
     public function index()
     {

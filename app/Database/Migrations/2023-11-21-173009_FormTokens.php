@@ -13,6 +13,6 @@ class FormTokens extends Migration
 
     public function down()
     {
-        //
+        $this->forge->dropTable('form_tokens');
     }
 }

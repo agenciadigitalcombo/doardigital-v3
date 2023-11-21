@@ -13,6 +13,6 @@ class Subscriptions extends Migration
 
     public function down()
     {
-        //
+        $this->forge->dropTable('subscriptions');
     }
 }

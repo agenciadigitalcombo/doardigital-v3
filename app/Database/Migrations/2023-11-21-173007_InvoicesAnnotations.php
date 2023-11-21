@@ -13,6 +13,6 @@ class InvoicesAnnotations extends Migration
 
     public function down()
     {
-        //
+        $this->forge->dropTable('invoices_annotations');
     }
 }

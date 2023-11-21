@@ -13,6 +13,6 @@ class Whatsapp extends Migration
 
     public function down()
     {
-        //
+        $this->forge->dropTable('whatsapp');
     }
 }

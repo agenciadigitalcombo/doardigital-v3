@@ -13,6 +13,6 @@ class Permissions extends Migration
 
     public function down()
     {
-        //
+        $this->forge->dropTable('permissions');
     }
 }

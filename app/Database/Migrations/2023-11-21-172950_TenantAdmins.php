@@ -13,6 +13,6 @@ class TenantAdmins extends Migration
 
     public function down()
     {
-        //
+        $this->forge->dropTable('tenant_admins');
     }
 }
