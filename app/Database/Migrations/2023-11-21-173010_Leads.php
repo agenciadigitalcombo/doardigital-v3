@@ -32,7 +32,6 @@ class Leads extends Migration
             ],
             'data' => [
                 'type' => 'TIMESTAMP',
-                'default' => 'CURRENT_TIMESTAMP',
             ],
             'status' => [
                 'type' => 'INT',

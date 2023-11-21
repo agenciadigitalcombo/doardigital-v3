@@ -23,7 +23,6 @@ class InvoicesAnnotations extends Migration
             ],
             'data' => [
                 'type' => 'TIMESTAMP',
-                'default' => 'CURRENT_TIMESTAMP',
             ],
         ]);
 
