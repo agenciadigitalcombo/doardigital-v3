@@ -13,7 +13,14 @@ class Leads extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    = [
+        'tenant_ID',
+        'name',
+        'email',
+        'phone',
+        'data',
+        'status',
+    ];
 
     // Dates
     protected $useTimestamps = false;

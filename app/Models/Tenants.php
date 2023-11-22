@@ -13,7 +13,12 @@ class Tenants extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    = [
+        'name',
+        'type',
+        'admin_ID',
+        'template_ID',
+    ];
 
     // Dates
     protected $useTimestamps = false;

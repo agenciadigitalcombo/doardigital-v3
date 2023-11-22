@@ -13,7 +13,18 @@ class Admins extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    = [
+        'name',
+        'fk',
+        'email',
+        'password_hash',
+        'document',
+        'admin_ID',
+        'is_activated',
+        'activation_code',
+        'recovery_code',
+        'data_register',
+    ];
 
     // Dates
     protected $useTimestamps = false;

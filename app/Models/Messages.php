@@ -13,7 +13,21 @@ class Messages extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    = [
+        'tenant_ID',
+        'type',
+        'to',
+        'subject',
+        'body',
+        'scheduling_date',
+        'send_date',
+        'status_send',
+        'call_back',
+        'retry',
+        'transaction_hash',
+        'external_hash',
+        'menssage_error',
+    ];
 
     // Dates
     protected $useTimestamps = false;

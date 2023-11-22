@@ -7,13 +7,17 @@ use CodeIgniter\Model;
 class TenantCustomFields extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'tenantcustomfields';
+    protected $table            = 'tenant_custom_fields';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    = [
+        'tenant_ID',
+        'name',
+        'value',
+    ];
 
     // Dates
     protected $useTimestamps = false;

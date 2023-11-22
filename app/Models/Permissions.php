@@ -13,7 +13,10 @@ class Permissions extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    = [
+        'admin_ID',
+        'resource_list',
+    ];
 
     // Dates
     protected $useTimestamps = false;

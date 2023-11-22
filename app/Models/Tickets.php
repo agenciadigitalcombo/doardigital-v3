@@ -13,7 +13,14 @@ class Tickets extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    = [
+        'tenant_ID',
+        'subject',
+        'description',
+        'status',
+        'open_date',
+        'close_date',
+    ];
 
     // Dates
     protected $useTimestamps = false;

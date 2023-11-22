@@ -7,13 +7,16 @@ use CodeIgniter\Model;
 class TenantAdmins extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'tenantadmins';
+    protected $table            = 'tenant_admins';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    = [
+        'tenant_ID',
+        'admin_ID',
+    ];
 
     // Dates
     protected $useTimestamps = false;

@@ -7,13 +7,17 @@ use CodeIgniter\Model;
 class KeyPix extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'keypixes';
+    protected $table            = 'key_pix';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    = [
+        'tenant_ID',
+        'token_hash',
+        'qrcode',
+    ];
 
     // Dates
     protected $useTimestamps = false;

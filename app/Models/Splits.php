@@ -13,7 +13,12 @@ class Splits extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    = [
+        'tenant_ID',
+        'type',
+        'amount',
+        'wallet_ID',
+    ];
 
     // Dates
     protected $useTimestamps = false;

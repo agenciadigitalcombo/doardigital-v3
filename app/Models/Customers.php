@@ -13,7 +13,20 @@ class Customers extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    = [
+        'tenant_ID',
+        'document',
+        'name',
+        'email',
+        'gender',
+        'phone',
+        'birthday',
+        'register_date',
+        'customer_hash',
+        'password_hash',
+        'is_activated',
+        'activation_code',
+    ];
 
     // Dates
     protected $useTimestamps = false;

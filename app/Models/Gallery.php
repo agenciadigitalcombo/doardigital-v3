@@ -7,13 +7,18 @@ use CodeIgniter\Model;
 class Gallery extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'galleries';
+    protected $table            = 'gallery';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    = [
+        'tenant_ID',
+        'image_URL',
+        'order',
+        'ImageDescription',
+    ];
 
     // Dates
     protected $useTimestamps = false;

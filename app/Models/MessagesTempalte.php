@@ -7,13 +7,19 @@ use CodeIgniter\Model;
 class MessagesTempalte extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'messagestempaltes';
+    protected $table            = 'messages_tempalte';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    = [
+        'tenant_ID',
+        'title',
+        'body',
+        'type',
+        'call_back',
+    ];
 
     // Dates
     protected $useTimestamps = false;

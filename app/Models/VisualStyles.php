@@ -7,13 +7,20 @@ use CodeIgniter\Model;
 class VisualStyles extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'visualstyles';
+    protected $table            = 'visual_styles';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    = [
+        'tenant_ID',
+        'primary_color',
+        'secondary_color',
+        'logo',
+        'template_name',
+        'ico',
+    ];
 
     // Dates
     protected $useTimestamps = false;

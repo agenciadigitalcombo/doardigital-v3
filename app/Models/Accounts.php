@@ -13,7 +13,11 @@ class Accounts extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    = [
+        'tenant_ID',
+        'token_hash',
+        'key_hash',
+    ];
 
     // Dates
     protected $useTimestamps = false;

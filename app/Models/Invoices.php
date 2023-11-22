@@ -13,7 +13,19 @@ class Invoices extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    = [
+        'tenant_ID',
+        'invoices_ID',
+        'customer_ID',
+        'amount',
+        'transaction_hash',
+        'ip',
+        'external_hash',
+        'due_date',
+        'register_date',
+        'type',
+        'status',
+    ];
 
     // Dates
     protected $useTimestamps = false;

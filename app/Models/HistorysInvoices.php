@@ -7,13 +7,20 @@ use CodeIgniter\Model;
 class HistorysInvoices extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'historysinvoices';
+    protected $table            = 'historys_invoices';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    = [
+        'tenant_ID',
+        'transaction_hash',
+        'external_hash',
+        'status',
+        'last_modified_date',
+        'body',
+    ];
 
     // Dates
     protected $useTimestamps = false;

@@ -7,13 +7,22 @@ use CodeIgniter\Model;
 class Email extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'emails';
+    protected $table            = 'email';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    = [
+        'tenant_ID',
+        'name',
+        'email',
+        'password',
+        'server_smtp',
+        'port_smtp',
+        'user_smtp',
+        'password_smtp',
+    ];
 
     // Dates
     protected $useTimestamps = false;

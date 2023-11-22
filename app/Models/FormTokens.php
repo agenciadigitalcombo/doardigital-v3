@@ -7,13 +7,15 @@ use CodeIgniter\Model;
 class FormTokens extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'formtokens';
+    protected $table            = 'form_tokens';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    = [
+        'token'
+    ];
 
     // Dates
     protected $useTimestamps = false;

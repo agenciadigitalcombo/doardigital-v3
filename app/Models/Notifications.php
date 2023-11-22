@@ -13,7 +13,11 @@ class Notifications extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    = [
+        'tenant_ID',
+        'content',
+        'read',
+    ];
 
     // Dates
     protected $useTimestamps = false;

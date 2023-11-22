@@ -7,13 +7,17 @@ use CodeIgniter\Model;
 class InvoicesAnnotations extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'invoicesannotations';
+    protected $table            = 'invoices_annotations';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    = [
+        'invoices_ID',
+        'texto',
+        'data',
+    ];
 
     // Dates
     protected $useTimestamps = false;

@@ -13,7 +13,14 @@ class Subscriptions extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    = [
+        'customers_ID',
+        'external_hash',
+        'status',
+        'type',
+        'amount',
+        'subscribe_hash',
+    ];
 
     // Dates
     protected $useTimestamps = false;

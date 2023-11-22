@@ -7,13 +7,17 @@ use CodeIgniter\Model;
 class CustomersCustomFields extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'customerscustomfields';
+    protected $table            = 'customers_custom_fields';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    = [
+        'customers_ID',
+        'name',
+        'value',
+    ];
 
     // Dates
     protected $useTimestamps = false;
