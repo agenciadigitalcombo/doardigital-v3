@@ -12,10 +12,11 @@ class Admins extends Seeder
             "name" => 'Bruno Vieira',
             "fk" => 'ADM_' . uniqid(),
             "email" => 'br.rafael@outlook.com',
-            "password_hash" => md5('AguaDeCocoNaoDaEmCoco'),
+            "password_hash" => hash('sha256', '123456'),
             "document" => 74751443054,
             "is_activated" => false,
             "activation_code" => uniqid(),
+            "data_register" => date('Y-m-d H:i:s')
         ];
 
         $this->db->table('admins')->insert($data);
