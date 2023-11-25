@@ -4,4 +4,4 @@
 <meta content="Sistema de Doações" name="description" />
 <meta content="DoarDigital" name="author" />
 <!-- App favicon -->
-<link rel="shortcut icon" href="/assets/images/favicon.ico">
+<link rel="shortcut icon" href="<?= base_url('assets/images/favicon.ico'); ?>">

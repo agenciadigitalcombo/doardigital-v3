@@ -1,14 +1,12 @@
 <?= $this->include('partials/main') ?>
 
 <head>
-
     <?php echo view('partials/title-meta', array('title'=>'Landing')); ?>
 
-    <!--Swiper slider css-->
-    <link href="/assets/libs/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css" />
+    <!-- Swiper slider css -->
+    <link href="<?= base_url('assets/libs/swiper/swiper-bundle.min.css'); ?>" rel="stylesheet" type="text/css" />
 
     <?= $this->include('partials/head-css') ?>
-
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#navbar-example">
@@ -18,8 +16,9 @@
         <nav class="navbar navbar-expand-lg navbar-landing fixed-top" id="navbar">
             <div class="container">
                 <a class="navbar-brand" href="/">
-                    <img src="/assets/images/logo-dark.png" class="card-logo card-logo-dark" alt="logo dark" height="17">
-                    <img src="/assets/images/logo-light.png" class="card-logo card-logo-light" alt="logo light" height="17">
+                <img src="<?= base_url('assets/images/logo-dark.png'); ?>" class="card-logo card-logo-dark" alt="logo dark" height="17">
+<img src="<?= base_url('assets/images/logo-light.png'); ?>" class="card-logo card-logo-light" alt="logo light" height="17">
+
                 </a>
                 <button class="navbar-toggler py-0 fs-20 text-body" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="mdi mdi-menu"></i>
@@ -78,40 +77,39 @@
                         </div>
 
                         <div class="mt-4 mt-sm-5 pt-sm-5 mb-sm-n5 demo-carousel">
-                            <div class="demo-img-patten-top d-none d-sm-block">
-                                <img src="/assets/images/landing/img-pattern.png" class="d-block img-fluid" alt="...">
-                            </div>
-                            <div class="demo-img-patten-bottom d-none d-sm-block">
-                                <img src="/assets/images/landing/img-pattern.png" class="d-block img-fluid" alt="...">
-                            </div>
-                            <div class="carousel slide carousel-fade" data-bs-ride="carousel">
-                                <div class="carousel-inner shadow-lg p-2 bg-white rounded">
-                                    <div class="carousel-item active" data-bs-interval="2000">
-                                        <img src="/assets/images/demos/default.png" class="d-block w-100" alt="...">
-                                    </div>
-                                    <div class="carousel-item" data-bs-interval="2000">
-                                        <img src="/assets/images/demos/saas.png" class="d-block w-100" alt="...">
-                                    </div>
-                                    <div class="carousel-item" data-bs-interval="2000">
-                                        <img src="/assets/images/demos/material.png" class="d-block w-100" alt="...">
-                                    </div>
-                                    <div class="carousel-item" data-bs-interval="2000">
-                                        <img src="/assets/images/demos/minimal.png" class="d-block w-100" alt="...">
-                                    </div>
-                                    <div class="carousel-item" data-bs-interval="2000">
-                                        <img src="/assets/images/demos/creative.png" class="d-block w-100" alt="...">
-                                    </div>
-                                    <div class="carousel-item" data-bs-interval="2000">
-                                        <img src="/assets/images/demos/modern.png" class="d-block w-100" alt="...">
-                                    </div>
-                                    <div class="carousel-item" data-bs-interval="2000">
-                                        <img src="/assets/images/demos/interactive.png" class="d-block w-100" alt="...">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <div class="demo-img-patten-top d-none d-sm-block">
+        <img src="<?= base_url('assets/images/landing/img-pattern.png'); ?>" class="d-block img-fluid" alt="...">
+    </div>
+    <div class="demo-img-patten-bottom d-none d-sm-block">
+        <img src="<?= base_url('assets/images/landing/img-pattern.png'); ?>" class="d-block img-fluid" alt="...">
+    </div>
+    <div class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner shadow-lg p-2 bg-white rounded">
+            <div class="carousel-item active" data-bs-interval="2000">
+                <img src="<?= base_url('assets/images/demos/default.png'); ?>" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="<?= base_url('assets/images/demos/saas.png'); ?>" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="<?= base_url('assets/images/demos/material.png'); ?>" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="<?= base_url('assets/images/demos/minimal.png'); ?>" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="<?= base_url('assets/images/demos/creative.png'); ?>" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="<?= base_url('assets/images/demos/modern.png'); ?>" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="<?= base_url('assets/images/demos/interactive.png'); ?>" class="d-block w-100" alt="...">
+            </div>
+        </div>
+    </div>
+</div>
+
                 <!-- end row -->
             </div>
             <!-- end container -->
@@ -138,40 +136,40 @@
 
                             <!-- Swiper -->
                             <div class="swiper trusted-client-slider mt-sm-5 mt-4 mb-sm-5 mb-4" dir="ltr">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <div class="client-images">
-                                            <img src="/assets/images/clients/amazon.svg" alt="client-img" class="mx-auto img-fluid d-block">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="client-images">
-                                            <img src="/assets/images/clients/walmart.svg" alt="client-img" class="mx-auto img-fluid d-block">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="client-images">
-                                            <img src="/assets/images/clients/lenovo.svg" alt="client-img" class="mx-auto img-fluid d-block">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="client-images">
-                                            <img src="/assets/images/clients/paypal.svg" alt="client-img" class="mx-auto img-fluid d-block">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="client-images">
-                                            <img src="/assets/images/clients/shopify.svg" alt="client-img" class="mx-auto img-fluid d-block">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="client-images">
-                                            <img src="/assets/images/clients/verizon.svg" alt="client-img" class="mx-auto img-fluid d-block">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div class="client-images">
+                <img src="<?= base_url('assets/images/clients/amazon.svg'); ?>" alt="client-img" class="mx-auto img-fluid d-block">
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="client-images">
+                <img src="<?= base_url('assets/images/clients/walmart.svg'); ?>" alt="client-img" class="mx-auto img-fluid d-block">
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="client-images">
+                <img src="<?= base_url('assets/images/clients/lenovo.svg'); ?>" alt="client-img" class="mx-auto img-fluid d-block">
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="client-images">
+                <img src="<?= base_url('assets/images/clients/paypal.svg'); ?>" alt="client-img" class="mx-auto img-fluid d-block">
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="client-images">
+                <img src="<?= base_url('assets/images/clients/shopify.svg'); ?>" alt="client-img" class="mx-auto img-fluid d-block">
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="client-images">
+                <img src="<?= base_url('assets/images/clients/verizon.svg'); ?>" alt="client-img" class="mx-auto img-fluid d-block">
+            </div>
+        </div>
+    </div>
+</div>
+
 
                     </div>
                 </div>
@@ -381,7 +379,8 @@
                 <div class="row align-items-center gy-4">
                     <div class="col-lg-6 col-sm-7 mx-auto">
                         <div>
-                            <img src="/assets/images/landing/features/img-1.png" alt="" class="img-fluid mx-auto">
+                        <img src="<?= base_url('assets/images/landing/features/img-1.png'); ?>" alt="" class="img-fluid mx-auto">
+
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -537,7 +536,7 @@
                     <!-- end col -->
                     <div class="col-lg-6 col-sm-7 col-10 ms-auto order-1 order-lg-2">
                         <div>
-                            <img src="/assets/images/landing/features/img-2.png" alt="" class="img-fluid">
+                        <img src="<?= base_url('assets/images/landing/features/img-2.png'); ?>" alt="" class="img-fluid">
                         </div>
                     </div>
                 </div>
@@ -546,7 +545,7 @@
                 <div class="row align-items-center mt-5 pt-lg-5 gy-4">
                     <div class="col-lg-6 col-sm-7 col-10 mx-auto">
                         <div>
-                            <img src="/assets/images/landing/features/img-3.png" alt="" class="img-fluid">
+                        <img src="<?= base_url('assets/images/landing/features/img-3.png'); ?>" alt="" class="img-fluid">
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -1236,7 +1235,7 @@
                     <div class="col-lg-4">
                         <div class="process-card mt-4">
                             <div class="process-arrow-img d-none d-lg-block">
-                                <img src="/assets/images/landing/process-arrow-img.png" alt="" class="img-fluid">
+                            <img src="<?= base_url('assets/images/landing/process-arrow-img.png'); ?>" alt="" class="img-fluid">
                             </div>
                             <div class="avatar-sm icon-effect mx-auto mb-4">
                                 <div class="avatar-title bg-transparent text-success rounded-circle h1">
@@ -1252,7 +1251,7 @@
                     <div class="col-lg-4">
                         <div class="process-card mt-4">
                             <div class="process-arrow-img d-none d-lg-block">
-                                <img src="/assets/images/landing/process-arrow-img.png" alt="" class="img-fluid">
+                            <img src="<?= base_url('assets/images/landing/process-arrow-img.png'); ?>" alt="" class="img-fluid">
                             </div>
                             <div class="avatar-sm icon-effect mx-auto mb-4">
                                 <div class="avatar-title bg-transparent text-success rounded-circle h1">
@@ -1302,7 +1301,8 @@
                         <div class="card">
                             <div class="card-body text-center p-4">
                                 <div class="avatar-xl mx-auto mb-4 position-relative">
-                                    <img src="/assets/images/users/avatar-2.jpg" alt="" class="img-fluid rounded-circle">
+                                <img src="<?= base_url('assets/images/users/avatar-2.jpg'); ?>" alt="" class="img-fluid rounded-circle">
+
                                     <a href="apps-mailbox" class="btn btn-success btn-sm position-absolute bottom-0 end-0 rounded-circle avatar-xs">
                                         <div class="avatar-title bg-transparent">
                                             <i class="ri-mail-fill align-bottom"></i>
@@ -1321,7 +1321,8 @@
                         <div class="card">
                             <div class="card-body text-center p-4">
                                 <div class="avatar-xl mx-auto mb-4 position-relative">
-                                    <img src="/assets/images/users/avatar-10.jpg" alt="" class="img-fluid rounded-circle">
+                                <img src="<?= base_url('assets/images/users/avatar-10.jpg'); ?>" alt="" class="img-fluid rounded-circle">
+
                                     <a href="apps-mailbox" class="btn btn-success btn-sm position-absolute bottom-0 end-0 rounded-circle avatar-xs">
                                         <div class="avatar-title bg-transparent">
                                             <i class="ri-mail-fill align-bottom"></i>
@@ -1340,7 +1341,8 @@
                         <div class="card">
                             <div class="card-body text-center p-4">
                                 <div class="avatar-xl mx-auto mb-4 position-relative">
-                                    <img src="/assets/images/users/avatar-3.jpg" alt="" class="img-fluid rounded-circle">
+                                <img src="<?= base_url('assets/images/users/avatar-3.jpg'); ?>" alt="" class="img-fluid rounded-circle">
+
                                     <a href="apps-mailbox" class="btn btn-success btn-sm position-absolute bottom-0 end-0 rounded-circle avatar-xs">
                                         <div class="avatar-title bg-transparent">
                                             <i class="ri-mail-fill align-bottom"></i>
@@ -1549,138 +1551,140 @@
         <!-- end contact -->
 
         <!-- start cta -->
-        <section class="py-5 bg-primary position-relative">
-            <div class="bg-overlay bg-overlay-pattern opacity-50"></div>
-            <div class="container">
-                <div class="row align-items-center gy-4">
-                    <div class="col-sm">
-                        <div>
-                            <h4 class="text-white mb-0 fw-semibold">Build your web App/SaaS with Velzon dashboard</h4>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                    <div class="col-sm-auto">
-                        <div>
-                            <a href="https://1.envato.market/velzon-admin" target="_blank" class="btn bg-gradient btn-danger"><i class="ri-shopping-cart-2-line align-middle me-1"></i> Buy Now</a>
-                        </div>
-                    </div>
-                    <!-- end col -->
+<section class="py-5 bg-primary position-relative">
+    <div class="bg-overlay bg-overlay-pattern opacity-50"></div>
+    <div class="container">
+        <div class="row align-items-center gy-4">
+            <div class="col-sm">
+                <div>
+                    <h4 class="text-white mb-0 fw-semibold">Build your web App/SaaS with Velzon dashboard</h4>
                 </div>
-                <!-- end row -->
             </div>
-            <!-- end container -->
-        </section>
-        <!-- end cta -->
+            <!-- end col -->
+            <div class="col-sm-auto">
+                <div>
+                    <a href="<?= base_url('https://1.envato.market/velzon-admin'); ?>" target="_blank" class="btn bg-gradient btn-danger"><i class="ri-shopping-cart-2-line align-middle me-1"></i> Buy Now</a>
+                </div>
+            </div>
+            <!-- end col -->
+        </div>
+        <!-- end row -->
+    </div>
+    <!-- end container -->
+</section>
+<!-- end cta -->
+
 
         <!-- Start footer -->
-        <footer class="custom-footer bg-dark py-5 position-relative">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 mt-4">
-                        <div>
-                            <div>
-                                <img src="/assets/images/logo-light.png" alt="logo light" height="17">
-                            </div>
-                            <div class="mt-4 fs-13">
-                                <p>Premium Multipurpose Admin & Dashboard Template</p>
-                                <p class="ff-secondary">You can build any type of web application like eCommerce, CRM, CMS, Project management apps, Admin Panels, etc using Velzon.</p>
-                            </div>
-                        </div>
+<footer class="custom-footer bg-dark py-5 position-relative">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 mt-4">
+                <div>
+                    <div>
+                        <img src="<?= base_url('assets/images/logo-light.png'); ?>" alt="logo light" height="17">
                     </div>
-
-                    <div class="col-lg-7 ms-lg-auto">
-                        <div class="row">
-                            <div class="col-sm-4 mt-4">
-                                <h5 class="text-white mb-0">Company</h5>
-                                <div class="text-muted mt-3">
-                                    <ul class="list-unstyled ff-secondary footer-list">
-                                        <li><a href="pages-profile">About Us</a></li>
-                                        <li><a href="pages-gallery">Gallery</a></li>
-                                        <li><a href="apps-projects-overview">Projects</a></li>
-                                        <li><a href="pages-timeline">Timeline</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-sm-4 mt-4">
-                                <h5 class="text-white mb-0">Apps Pages</h5>
-                                <div class="text-muted mt-3">
-                                    <ul class="list-unstyled ff-secondary footer-list">
-                                        <li><a href="pages-pricing">Calendar</a></li>
-                                        <li><a href="apps-mailbox">Mailbox</a></li>
-                                        <li><a href="apps-chat">Chat</a></li>
-                                        <li><a href="apps-crm-deals">Deals</a></li>
-                                        <li><a href="apps-tasks-kanban">Kanban Board</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-sm-4 mt-4">
-                                <h5 class="text-white mb-0">Support</h5>
-                                <div class="text-muted mt-3">
-                                    <ul class="list-unstyled ff-secondary footer-list">
-                                        <li><a href="pages-faqs">FAQ</a></li>
-                                        <li><a href="pages-faqs">Contact</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="mt-4 fs-13">
+                        <p>Premium Multipurpose Admin & Dashboard Template</p>
+                        <p class="ff-secondary">You can build any type of web application like eCommerce, CRM, CMS, Project management apps, Admin Panels, etc using Velzon.</p>
                     </div>
-
                 </div>
+            </div>
 
-                <div class="row text-center text-sm-start align-items-center mt-5">
-                    <div class="col-sm-6">
-
-                        <div>
-                            <p class="copy-rights mb-0">
-                                <script> document.write(new Date().getFullYear()) </script> © Velzon - Themesbrand
-                            </p>
+            <div class="col-lg-7 ms-lg-auto">
+                <div class="row">
+                    <div class="col-sm-4 mt-4">
+                        <h5 class="text-white mb-0">Company</h5>
+                        <div class="text-muted mt-3">
+                            <ul class="list-unstyled ff-secondary footer-list">
+                                <li><a href="<?= base_url('pages-profile'); ?>">About Us</a></li>
+                                <li><a href="<?= base_url('pages-gallery'); ?>">Gallery</a></li>
+                                <li><a href="<?= base_url('apps-projects-overview'); ?>">Projects</a></li>
+                                <li><a href="<?= base_url('pages-timeline'); ?>">Timeline</a></li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="col-sm-6">
-                        <div class="text-sm-end mt-3 mt-sm-0">
-                            <ul class="list-inline mb-0 footer-social-link">
-                                <li class="list-inline-item">
-                                    <a href="javascript: void(0);" class="avatar-xs d-block">
-                                        <div class="avatar-title rounded-circle">
-                                            <i class="ri-facebook-fill"></i>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="list-inline-item">
-                                    <a href="javascript: void(0);" class="avatar-xs d-block">
-                                        <div class="avatar-title rounded-circle">
-                                            <i class="ri-github-fill"></i>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="list-inline-item">
-                                    <a href="javascript: void(0);" class="avatar-xs d-block">
-                                        <div class="avatar-title rounded-circle">
-                                            <i class="ri-linkedin-fill"></i>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="list-inline-item">
-                                    <a href="javascript: void(0);" class="avatar-xs d-block">
-                                        <div class="avatar-title rounded-circle">
-                                            <i class="ri-google-fill"></i>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="list-inline-item">
-                                    <a href="javascript: void(0);" class="avatar-xs d-block">
-                                        <div class="avatar-title rounded-circle">
-                                            <i class="ri-dribbble-line"></i>
-                                        </div>
-                                    </a>
-                                </li>
+                    <div class="col-sm-4 mt-4">
+                        <h5 class="text-white mb-0">Apps Pages</h5>
+                        <div class="text-muted mt-3">
+                            <ul class="list-unstyled ff-secondary footer-list">
+                                <li><a href="<?= base_url('pages-pricing'); ?>">Calendar</a></li>
+                                <li><a href="<?= base_url('apps-mailbox'); ?>">Mailbox</a></li>
+                                <li><a href="<?= base_url('apps-chat'); ?>">Chat</a></li>
+                                <li><a href="<?= base_url('apps-crm-deals'); ?>">Deals</a></li>
+                                <li><a href="<?= base_url('apps-tasks-kanban'); ?>">Kanban Board</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 mt-4">
+                        <h5 class="text-white mb-0">Support</h5>
+                        <div class="text-muted mt-3">
+                            <ul class="list-unstyled ff-secondary footer-list">
+                                <li><a href="<?= base_url('pages-faqs'); ?>">FAQ</a></li>
+                                <li><a href="<?= base_url('pages-faqs'); ?>">Contact</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
-        </footer>
-        <!-- end footer -->
+
+        </div>
+
+        <div class="row text-center text-sm-start align-items-center mt-5">
+            <div class="col-sm-6">
+
+                <div>
+                    <p class="copy-rights mb-0">
+                        <script> document.write(new Date().getFullYear()) </script> © Velzon - Themesbrand
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="text-sm-end mt-3 mt-sm-0">
+                    <ul class="list-inline mb-0 footer-social-link">
+                        <li class="list-inline-item">
+                            <a href="javascript: void(0);" class="avatar-xs d-block">
+                                <div class="avatar-title rounded-circle">
+                                    <i class="ri-facebook-fill"></i>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="javascript: void(0);" class="avatar-xs d-block">
+                                <div class="avatar-title rounded-circle">
+                                    <i class="ri-github-fill"></i>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="javascript: void(0);" class="avatar-xs d-block">
+                                <div class="avatar-title rounded-circle">
+                                    <i class="ri-linkedin-fill"></i>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="javascript: void(0);" class="avatar-xs d-block">
+                                <div class="avatar-title rounded-circle">
+                                    <i class="ri-google-fill"></i>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="javascript: void(0);" class="avatar-xs d-block">
+                                <div class="avatar-title rounded-circle">
+                                    <i class="ri-dribbble-line"></i>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- end footer -->
+
 
 
         <!--start back-to-top-->
@@ -1695,11 +1699,12 @@
 
     <?= $this->include('partials/vendor-scripts') ?>
 
-    <!--Swiper slider js-->
-    <script src="/assets/libs/swiper/swiper-bundle.min.js"></script>
+<!-- Swiper slider js -->
+<script src="<?= base_url('assets/libs/swiper/swiper-bundle.min.js'); ?>"></script>
 
-    <!-- landing init -->
-    <script src="/assets/js/pages/landing.init.js"></script>
+<!-- landing init -->
+<script src="<?= base_url('assets/js/pages/landing.init.js'); ?>"></script>
+
 </body>
 
 </html>
